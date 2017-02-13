@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Socket.IO chat</title>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      body { font: 13px Helvetica, Arial; }
+      form { background: #000; padding: 3px; position: fixed; bottom: 0; width: 100%; }
+      form input { border: 0; padding: 10px; width: 90%; margin-right: .5%; }
+      form button { width: 9%; background: rgb(130, 224, 255); border: none; padding: 10px; }
+      #messages { list-style-type: none; margin: 0; padding: 0; }
+      #messages li { padding: 5px 10px; }
+      #messages li:nth-child(odd) { background: #eee; }
+    </style>
+  </head>
+  <body>
+    <!-- <ul id="messages"></ul> -->
+    <div id="messages"></div>
+    <hr>
+
+
+    <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+
+
+    <!-- <audio id="buzzer" src="chamada2.wav" type="audio/wav">Your browser does not support the &#60;audio&#62; element.</audio>
+    <form id='sample' action="#" data-ajax="false">
+        <fieldset>
+         <input value="Start" type="submit">
+         </fieldset>
+    </form> -->
+
+    <audio id="chamada">
+        <source src="/mp3/chamada.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="myAudio">
+
+      <source src="http://localhost/chamada.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+
+    <p>Click the buttons to play or pause the audio.</p>
+
+    <button onclick="playAudio()" type="button">Play Audio</button>
+
+    <script>
+    var x = document.getElementById("myAudio");
+
+    function playAudio() {
+        x.play();
+    }
+
+    function pauseAudio() {
+        x.pause();
+    }
+    </script>
+
+    <script>
+
+      var socket = io();
+
+
+
+      socket.on('painelCrea', function(msg){
+
+        $('#messages').text(msg);
+      });
+
+
+      // $('form').tri(function(){
+      //   socket.emit('painelCrea', $('#m').val());
+      //   $('#m').val('');
+      //   return false;
+      // });
+
+
+    </script>
+
+
+
+
+  </body>
+</html>
