@@ -15,7 +15,12 @@
     </head>
   <body>
 
-        <div id="messages"></div>
+        <div id="painel">
+          <h1 id="daVez"></h1>
+          <h2 id="anterior1"></h2>
+          <h2 id="anterior2"></h2>
+        </div>
+        <!-- <div id="anteriores"></div> -->
         <hr>
 
 
@@ -25,7 +30,7 @@
         <audio id="myAudio">
 
             <source src="http://localhost/chamada.mp3" type="audio/mpeg">
-          
+
         </audio>
 
         <!-- <button onclick="playAudio()" type="button" >Play Audio</button> -->
@@ -43,11 +48,18 @@
 
                 var socket = io();
 
-              socket.on('painelCrea', function(msg){
-
-                $('#messages').text(msg);
+              socket.on('painelCrea', function(clientes){
+                // console.log(clientes[0]);
+                $('#daVez').html(clientes[0]);
+                $('#anterior1').html(clientes[1]);
+                $('#anterior2').html(clientes[2]);
 
               });
+
+              // socket.on('anteriores', function(listArray){
+              //    $('#anteriores').html(listArray.join(", "));
+              // });
+
 
               var mySound = new Audio('http://localhost/chamada.mp3');
               mySound.load();
@@ -55,7 +67,7 @@
               socket.on('painelCrea', function(msg){
                   console.log(msg);
                   mySound.play();
-                });
+             });
               // $('form').tri(function(){
               //   socket.emit('painelCrea', $('#m').val());
               //   $('#m').val('');
