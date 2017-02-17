@@ -68,7 +68,7 @@
 
     <div class="row bgDaVez" style="height:65%; background: #0BAFE6; display: block;" >
         <div class="col-xs-12 ">
-              <div class="fontNumeroGuiche">04</div>
+              <div id="guiche" class="fontNumeroGuiche"></div>
               <div id="daVez" class="fontPanel"></div>
         </div>
     </div>
@@ -113,11 +113,12 @@ $('.carousel').carousel();
       var socket = io();
 
       socket.on('painelCrea', function(clientes){
-        $('#daVez').html(clientes[0]);
-        $('#anterior1').html(clientes[1]);
-        $('#anterior2').html(clientes[2]);
-        $('#anterior3').html(clientes[2]);
-        $('#anterior4').html(clientes[2]);
+        $('#guiche').html(clientes[0].guiche);
+        $('#daVez').html(clientes[0].nome);
+        $('#anterior1').html(clientes[1].guiche + " - " + clientes[1].nome);
+        $('#anterior2').html(clientes[2].guiche + " - " + clientes[2].nome);
+        $('#anterior3').html(clientes[3].guiche + " - " + clientes[3].nome);
+        $('#anterior4').html(clientes[4].guiche + " - " + clientes[4].nome);
       });
 
 

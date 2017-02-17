@@ -15,9 +15,9 @@ app.get('/guiche', function(req, res){
 
 io.on('connection', function(socket){
 
-  socket.on('painelCrea', function(msg){
+  socket.on('painelCrea', function(cliente){
 
-    filaDoDia.unshift(msg);
+    filaDoDia.unshift(cliente);
     io.emit('painelCrea', filaDoDia);
 
     if(filaDoDia.length > 4){
