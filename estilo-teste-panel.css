@@ -1,0 +1,159 @@
+
+.noLateralPadding {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.noLateralMargin {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.logo {
+    background-color: #2A3F54;
+    padding: 10px 40px;
+    padding-left: 5%;
+
+}
+
+.logo .atendimento h1 {
+    font-size: 3.2em;
+    color: #fff;
+}
+
+
+footer {
+    background-color: #2A3F54;
+    padding: 80px 20px;
+    border: 4px solid;
+    border-color:#2A3F54;
+}
+
+footer h4 {
+    color: #fff;
+    font-size: 1.4em;
+}
+#cnpjfooter {
+    display: inline-block;
+}
+
+#telfooter {
+    display: inline-block;
+    padding-left: %;
+}
+
+.footer-geral hr {
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 0px;
+}
+
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.footer-geral .logofooter {
+    padding-left: 0%;
+    padding-top: 10px;
+    margin-bottom: 14px;
+    width: 80%;
+}
+
+.logofooter {
+    padding-left: 0%;
+    padding-top: 10px;
+    width: 80%;
+}
+
+
+.guiche-nome{
+    padding: 144px 0px;
+    background-color: white;
+    text-align:center;
+    border: 4px solid;
+    border-color:#2A3F54;
+}
+
+
+.numero-guiche {
+    padding: 40px 0px;
+}
+
+.numero-guiche h1{
+    font-weight: 200;
+    font-family: Helvetica;
+    font-size: 6.4em;
+}
+
+.nome-cliente {
+    padding-left: 40%;
+    padding: 10px 0px;
+}
+
+.nome-cliente h1 {
+    font-weight: 600;
+}
+
+
+.ultimas-chamadas {
+    padding: 215.5px 0px;
+    background-color: white;
+    text-align:center;
+    border: 4px solid;
+    border-color:#2A3F54;
+}
+
+.titulo-chamada h3{
+    font-weight: 600;
+    font-family: Helvetica;
+    font-size: 3.4em;
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+
+.fila-ultimos h3{
+    font-weight: 600;
+    font-family: Helvetica;
+    font-size: 1.8em;
+}
+
+.logoheader {
+    margin-top: 10px;
+    padding-left: 120px;
+}
+
+
+@media only screen and (min-width: 1024px) {
+}
+
+@media only screen and (max-width: 1024px) {
+    
+    .logo {
+        padding-top: 30px;
+        padding-left: 17%;
+    }
+
+    .logoheader {
+        margin-left: 30%;
+    }
+
+    .logo .atendimento h2 {
+        font-size: 1.6em;
+    }
+
+    .footer-geral .logofooter {
+        width: 60%;
+        margin-left: 15%;
+    }
+
+    .footer-geral h4 {
+        font-size: 1.3em;
+    }
+}
+
+
+
+
+
+

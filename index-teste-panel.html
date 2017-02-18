@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>Teste Panel</title>
+        <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet">
+        <link href="estilo-teste-panel.css" rel="stylesheet">
+        <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/css/bootstrap-responsive.min.css"rel="stylesheet">
+    </head>
+     <div class="col-md-12 col-xs-12 noLateralPadding">
+        <body>
+            <header>
+                <div class="container-fluid">
+                    <div class="row logo">
+                        <div class="col-md-6 col-xs-12">
+                            <div class="logoheader pull-left">
+                                <a href='#'><img class="img-responsive" src='Rio-de-Janeiro-crea_outline_branco.png'/></a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xs-12">
+                            <div class="row atendimento pull-right">
+                                <h1>ATENDIMENTO - SEDE / RJ</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <main>
+                <div class="container-fluid">
+                   <div class="row">
+                        <div class="col-md-6 guiche-nome">
+                            <div class="col-md-12 col-xs-12 numero-guiche text-center">
+                                <h1>GUICHÊ</h1>
+                                <h1>04</h1>   
+                            </div>
+                            <div class="col-md-12 col-xs-12 nome-cliente text-center">
+                                <h1>Fulano da Silva Albuquerque Sampaio</h1>
+                            </div>
+                        </div>
+                        <div class="col-md-6 ultimas-chamadas ">
+                            <div class="col-md-12 col-xs-12 titulo-chamada">
+                                <h3 class="text-center">ÚLTIMAS CHAMADAS</h3>
+                            </div>
+                            <div class="fila-ultimos">
+                                <div class="col-md-12 col-xs-12 text-center">
+                                    <h3>Fulano da Silva Albuquerque Sampaio</h3>
+                                </div>
+                                 <div class="col-md-12 col-xs-12 text-center">
+                                    <h3>Fulano da Silva Albuquerque Sampaio</h3>
+                                </div>
+                                 <div class="col-md-12 col-xs-12 text-center">
+                                    <h3>Fulano da Silva Albuquerque Sampaio</h3>
+                                </div>
+                                <div class="col-md-12 col-xs-12 text-center">
+                                    <h3>Fulano da Silva Albuquerque Sampaio</h3>
+                                </div>   
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer class="footer-geral">
+                <div class="container-fluid ">
+                    <div class="row empresa">
+                        <div class="col-md-8 col-xs-12 text-center">
+                            <h4>Rua Buenos Aires, 40 - Centro, Rio de Janeiro - RJ CEP 20070-022</h4>
+                            <h4 id="cnpjfooter">CNPJ: 34.260.596/0001-80</h4>
+                            <h4 id="telfooter">Telefone: (21) 2179-2007</h4>
+                        </div>
+                        <div class="col-md-4 col-xs-12 text-center">
+                            <div class="logofooter">
+                                <img class="img-responsve logofooter" src="crea-nome.png" />
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row missao text-center">
+                        <h4>Trabalhando em defesa da sociedade - Acesse: www.crea-rj.org.br</h4>
+                    </div>
+                </div>
+            </footer>
+            <!-- Bootstrap core JavaScript
+            ================================================== -->
+            <!-- Placed at the end of the document so the pages load faster -->
+            <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+            <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+            <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+
+            <script type="text/javascript">
+
+                var header = $('header').outerHeight();
+                var main = $('main').outerHeight();
+                var footer = $('footer').outerHeight();
+                var max = header + main + footer;
+                var tela = $(window).outerHeight();
+                if (max < tela) {
+                    $('footer').css({
+                        'margin-top': tela - max
+                    })
+                }
+
+                $(window).resize(function () {
+                    header = $('header').outerHeight();
+                    main = $('main').outerHeight();
+                    footer = $('footer').outerHeight();
+                    max = header + main + footer;
+                    tela = $(window).outerHeight();
+                    if (max < tela) {
+                        $('footer').css({
+                            'margin-top': tela - max
+                        })
+                    }
+                })
+
+            </script>   
+        </body>
+     </div>
+</html>
